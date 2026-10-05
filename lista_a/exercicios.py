@@ -10,29 +10,49 @@ Os exercicios do Bloco 3 devolvem DOIS valores: o resultado e a contagem.
 
 def conta_negativos(lista):
     """Quantos numeros da lista sao menores que zero."""
-    pass
+    contador = 0
+    for numero in lista:
+        if numero < 0:
+            contador += 1
+    return contador
 
 
 def media(lista):
     """Media dos numeros. Lista vazia devolve 0."""
-    pass
+    if not lista:
+        return 0
+    return sum(lista) / len(lista)
+    
 
 
 def sem_o_maior(lista):
     """Lista NOVA sem o maior valor. Se o maior repete, tira so o primeiro."""
-    pass
+    if not lista:
+        return []
+    
+    nova_lista = lista.copy()
+    maior = max(nova_lista)
+    nova_lista.remove(maior)
+    return nova_lista
 
 
 def acumulada(lista):
     """Lista NOVA onde cada posicao e a soma de tudo ate ali.
     acumulada([1, 2, 3]) -> [1, 3, 6]"""
-    pass
+    resultado = []
+    soma_atual = 0
+    for numero in lista:
+        soma_atual += numero
+        resultado.append(soma_atual)
+    return resultado
 
 
 def achata(lista_de_listas):
-    """(Desafio) Junta as sublistas numa lista so.
-    achata([[1, 2], [3]]) -> [1, 2, 3]"""
-    pass
+    resultado = []
+    for lista in lista_de_listas:
+        resultado.extend(lista)
+    return resultado
+
 
 
 # ---------- Bloco 2: busca ----------
