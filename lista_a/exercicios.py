@@ -58,9 +58,11 @@ def achata(lista_de_listas):
 # ---------- Bloco 2: busca ----------
 
 def busca_ultima(lista, alvo):
-    """ULTIMA posicao do alvo, ou -1."""
-    pass
-
+        """ULTIMA posicao do alvo, ou -1."""
+    for i in reversed(range(len(lista))):
+        if lista[i] == alvo:
+            return i 
+    return -1 
 
 def conta_ocorrencias(lista, alvo):
     """Quantas vezes o alvo aparece."""
@@ -82,7 +84,7 @@ def busca_binaria_primeira(lista, alvo):
 
 def soma_pares_contando(lista):
     """(soma_dos_pares, operacoes). Conte 1 por elemento examinado."""
-    pass
+    pa
 
 
 def maior_contando(lista):
